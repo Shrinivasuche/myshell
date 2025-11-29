@@ -1,11 +1,10 @@
 CXX = g++
-CXXFLAGS = -Wall -g
+CXXFLAGS = -Wall -Iinclude
 
 SRC = src/main.cpp src/parser.cpp src/execute.cpp src/builtins.cpp
-OBJ = $(SRC:.cpp=.o)
 
-myshell: $(OBJ)
-	$(CXX) $(OBJ) -o myshell
+myshell: $(SRC)
+	$(CXX) $(CXXFLAGS) $(SRC) -o myshell
 
 clean:
-	rm -f $(OBJ) myshell
+	rm -f myshell

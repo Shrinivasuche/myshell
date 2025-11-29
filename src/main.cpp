@@ -1,21 +1,20 @@
-#include <iostream>
-#include <string>
 #include "../include/parser.hpp"
+#include "../include/execute.hpp"
+#include <iostream>
 
 int main() {
-    std::string input;
-
     while (true) {
         std::cout << "myshell> ";
+        std::string input;
         std::getline(std::cin, input);
 
-        if (input == "exit") break;
-
         auto tokens = parseInput(input);
-        for (auto &t : tokens) {
+
+        // Debug print (optional)
+        for (const auto &t : tokens) {
             std::cout << "Token: " << t << std::endl;
         }
-    }
 
-    return 0;
+        executeCommand(tokens);
+    }
 }

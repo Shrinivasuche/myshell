@@ -1,13 +1,16 @@
-#include "../include/parser.hpp"
+#include "parser.hpp"
 #include <sstream>
 
-std::vector<std::string> parseInput(const std::string& input) {
+// Very simple whitespace tokenizer.
+// Does NOT handle quotes or escapes yet.
+std::vector<std::string> parseInput(const std::string &input) {
     std::vector<std::string> tokens;
-    std::stringstream ss(input);
-    std::string token;
-
-    while (ss >> token) {
-        tokens.push_back(token);
+    std::istringstream iss(input);
+    std::string tok;
+    while (iss >> tok) {
+        tokens.push_back(tok);
     }
     return tokens;
 }
+
+

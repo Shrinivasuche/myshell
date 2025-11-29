@@ -4,6 +4,6 @@
 #include <string>
 #include <vector>
 
-std::vector<std::string> parseInput(const std::string& input);
+std::vector<std::string> parseInput(const std::string &input);
 
-#endif
+#endif // PARSER_HPP
