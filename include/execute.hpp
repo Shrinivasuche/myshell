@@ -1,3 +1,4 @@
+// include/execute.hpp
 #ifndef EXECUTE_HPP
 #define EXECUTE_HPP
 
@@ -6,4 +7,4 @@
 
 void executeCommand(const std::vector<std::string>& tokens);
 
-#endif
+#endif // EXECUTE_HPP
