@@ -14,18 +14,19 @@ This shell supports execution of external commands, built-in commands, multi-pip
 - Parent waits for child using `waitpid()`
 - Supports arguments, multiple tokens, and simple commands  
   Example:
-  ls -l
-  pwd
-  echo hello world
+    * ls -l
+    * pwd
+    * echo hello world
 
 ### ✅ **2. Built-In Commands**
 
 These are executed inside the shell without spawning a new process:
 
-* Command	           Description
-* cd <dir>	         Change directory
-* exit	           Exit the shell
-* help	           List supported commands
+| Command    | Description             |
+|------------|--------------------------|
+| `cd <dir>` | Change directory         |
+| `exit`     | Exit the shell           |
+| `help`     | List supported commands  |
 
 ### ✅ **3. Multi-Pipe Support (|)**
 
@@ -47,7 +48,7 @@ Pipeline handling includes:
 
 ### ✅ **4. Input/Output Redirection (<, >, >>)**
 
-Supports input redirection (`<`) and output redirection (`>`).
+Supports input redirection (`<`), output redirection (`>`), and append redirection (`>>`).
 
 Examples:
 
@@ -76,6 +77,7 @@ This project gives practical exposure to Operating Systems, Linux internals, and
 
 
 ## 📁 Project Structure
+```text
 /myshell
 │
 ├── src
@@ -87,15 +89,13 @@ This project gives practical exposure to Operating Systems, Linux internals, and
 ├── include              # Header files
 ├── Makefile             # Build configuration
 └── README.md            # Project documentation
-
+```
 
 ## 🛠 Build & Run Instructions
 
-* Compile
-make
+* Compile - `make`
 
-* Run
-./myshell
+* Run - `./myshell`
 
 
 ## 🧩 Future Enhancements (Optional)
@@ -116,4 +116,4 @@ make
 ## 👤 Author
 
 Shrinivas Uche
-Systems Programming & Fullstack Developer
+* Systems Programming & Fullstack Developer
